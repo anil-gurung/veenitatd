@@ -1,0 +1,234 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-hue: 190;
+  --gray-hue: 240;
+  --color-primary: hsl(var(--primary-hue), 100%, 50%);
+  --color-secondary: #e8b61e;
+  --color-text: #b82121;
+  --color-gray-100: hsl(var(--gray-hue), 47%, 94%);
+  --color-gray-200: hsl(var(--gray-hue), 26%, 75%);
+  --color-gray-300: hsl(var(--gray-hue), 24%, 64%);
+  --color-gray-400: hsl(var(--gray-hue), 16%, 41%);
+  --color-gray-500: hsl(var(--gray-hue), 44%, 25%);
+  --color-gray-600: hsl(var(--gray-hue), 48%, 15%);
+  --color-white: #fff;
+  --color-black: #000;
+
+  --container-width-lg: 80%;
+  --container-width-md: 90%;
+
+  --transition: all 500ms ease;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--color-gray-400);
+  line-height: 1.7;
+  overflow-x: hidden;
+  /* background: var(--color-gray-600); */
+}
+
+.container {
+  width: var(--container-width-lg);
+  max-width: 1920px;
+  margin-inline: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3rem;
+  color: var(--color-text);
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--color-text);
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--color-black);
+}
+h4 {
+  color: var(--color-gray-500);
+}
+
+a {
+  color: var(--color-text);
+}
+img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+.logo {
+  width: 6rem;
+  display: block;
+}
+.header_content {
+  margin-top: 5rem;
+  text-align: center;
+  width: 80vw;
+  margin-inline: auto;
+  margin-bottom: 5rem;
+}
+
+/* footer */
+footer {
+  height: 100%;
+
+  margin-top: 7rem;
+  padding-top: 2rem;
+  font-size: 0.9rem;
+}
+.footer_bg {
+  background-size: cover;
+  background-clip: unset;
+  background: url('./assets/footerbackground.jpg');
+  /* width: 100%; */
+
+  /* object-fit: cover; */
+  /* background-repeat: no-repeat; */
+}
+
+.footer_container {
+  display: grid;
+  grid-template-columns: 17rem 1fr 10rem 1fr;
+  gap: 5rem;
+}
+.footer_container article {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.7rem;
+  color: var(--color-white);
+}
+.footer_container article p {
+  margin-top: 0.5rem;
+  color: white;
+}
+.footer_container article h4 {
+  margin-bottom: 0.6rem;
+  font-size: 1.3rem;
+  color: var(--color-text);
+}
+.footer_socials {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.footer_socials a {
+  color: var(--color-white);
+  padding: 0.7rem;
+  font-size: 1.3rem;
+  border: 1px solid transparent;
+  border-radius: 0.6rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.footer_socials a:hover {
+  background: transparent;
+}
+.abc {
+  color: white;
+}
+
+.footer_copyright {
+  color: var(--color-white);
+  text-align: center;
+  padding: 0.5rem 0;
+  border-top: 2px solid var(--color-white);
+  margin-top: 1.5rem;
+}
+
+/* media queries(medium screens) */
+@media screen and (max-width: 1024px) {
+  .footer_container {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+/* media queries(small screens) */
+@media screen and (max-width: 600px) {
+  /* footer {
+    margin-top: 3rem;
+  } */
+  .footer_container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .footer_container article {
+    align-items: center;
+  }
+  .footer_copyright {
+    width: 80%;
+    margin-inline: auto;
+  }
+}
+
+/* form */
+.contactform_container {
+  /* width: 100%; */
+  padding: 1rem;
+  background: var(--color-text);
+  /* background-image: url(https://aakashagro.com/wp-content/uploads/2023/06/banner-demo-scaled-1920x1000.jpg); */
+  background-size: cover;
+  margin-top: 6.5rem;
+  text-align: center;
+}
+.form_title h1 {
+  color: white;
+}
+.submit {
+  /* background: red; */
+  color: white;
+  width: 50%;
+  text-align: left;
+  margin-top: 3rem;
+  margin-inline: auto;
+  display: grid;
+  /* margin-bottom: 3rem; */
+
+  /* gap: 1.3rem; */
+}
+.submit input {
+  padding: 1rem;
+  border: 1px solid greenyellow;
+  border-radius: 2px;
+}
+#message {
+  padding: 2rem;
+}
+.btn {
+  color: white;
+  margin-top: 1.3rem;
+  background: var(--color-secondary);
+  width: 20%;
+  padding: 0.8rem;
+  border-radius: 2px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.btn:hover {
+  color: var(--color-secondary);
+  background: rgb(255, 255, 255);
+}
